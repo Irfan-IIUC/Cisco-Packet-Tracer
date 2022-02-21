@@ -1,0 +1,14 @@
+config t
+hostname SW1
+
+vlan 10
+name Sales
+
+Vlan 20 
+name marketing
+
+int range f0/1-3
+switchport access vlan 10
+
+int range f0/4-6
+switchport access vlan 20
