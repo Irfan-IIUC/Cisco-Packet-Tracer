@@ -1,0 +1,51 @@
+config t
+
+hostname SW1
+
+vlan 10
+name sales
+
+vlan 20
+name Marketing
+
+int f0/3
+switchport access vlan 10
+switchport mode access
+
+int f0/4
+switchport access vlan 10
+switchport mode access
+
+
+
+int f0/5
+switchport access vlan 20
+switchport mode access
+
+
+int f0/6
+switchport access vlan 20
+switchport mode access
+
+
+int f0/1
+switchport access vlan 10
+switchport mode access
+
+
+int f0/2
+switchport access vlan 20
+switchport mode access
+
+------------
+
+config t
+hostname R1
+int f0/0
+ip add 192.168.10.1 255.255.255.0
+no sh
+
+int f0/1
+ip add 192.168.20.1 255.255.255.0
+
+no sh
