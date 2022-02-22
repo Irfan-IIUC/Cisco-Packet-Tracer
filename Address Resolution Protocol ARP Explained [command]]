@@ -1,0 +1,20 @@
+ARP finds MAC address of a host from its know IP address. (Resolve the MAC address  from IP address).
+
+It is layer-2 protocol.
+
+ARP request is a Broadcast and ARP response is a Unicast.
+The ARP concept used only in IP4 Environment.
+
+ARP is never generated the device of other network.
+
+
+There are 5 types of ARP.
+
+
+ARP: Resolve the MAC address  from IP address
+
+Proxy ARP: Routers do not forward Broadcasts, they will send their own MAC address to the host.
+
+RARP (Reverse ARP): RARP maps a known MAC address to an IP address. 
+
+GARP (Gratuitous ARP): It is use to avoid to duplicate IP address.
