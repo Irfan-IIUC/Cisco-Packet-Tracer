@@ -1,0 +1,29 @@
+config t
+hostname MLS
+
+vlan 10
+name sales
+
+vlan 20
+name marketing
+
+int range g1/0/1-2
+switchport access vlan 10
+switchport mode access
+
+
+int range g1/0/3-4
+switchport access vlan 20
+switchport mode access
+
+
+ip routing
+
+int vlan 10
+ip add 192.168.10.1 255.255.255.0
+no sh
+
+
+int vlan 20
+ip add 192.168.20.1 255.255.255.0
+no sh
